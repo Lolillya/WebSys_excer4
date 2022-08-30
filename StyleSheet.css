@@ -85,18 +85,12 @@
     left: 50px;
 }
 
-
-
-/* .bottomPic {
-    width:200px;
-} */
-
 .brands {
     position:absolute;
     border-spacing: 15px 50px;
     bottom:50px;
     padding-bottom:25px;
-    top: 1000px;
+    top: 1200px;
     width: auto;
     height: 200px;
     margin: 0 auto;
@@ -112,8 +106,6 @@
 .bottomBrands {
     width:200px;
 }
-
-
 
 /*-----------loginPage.html----------*/
 
@@ -669,7 +661,7 @@
     margin: 0 auto;
     width: auto;
     height: 300px;
-    top:350px;
+    top:400px;
     left: 50px;
 }
 

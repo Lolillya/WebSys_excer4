@@ -681,16 +681,16 @@ function mbCallback(response, context) {
     if(x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue == "Motherboard")
     {
       var pics = x[i].getElementsByTagName("picture")[0].childNodes[0].nodeValue;
-      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br><br>";
-      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br><br>";
-      var price = "Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-      var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;margin-top:15px;' />";
-      
+      var offer = "<p style='color:red; margin-bottom:0px; font-weight:bold;'>Special Offer!</p>";
+      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br>";
+      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br>";
+      var price = "<p>Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue + "<span style='color:red';> -10% </span></p>";
+      var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;' />";
       break;
     }
   }
 
-  return "<div>" + image + pcat + pname + price + "</div>";
+  return "<div style='width:200px';>" + image + offer + pcat + pname + price + "</div>";
 }
 
 var cpuAjaxSetting = {
@@ -707,14 +707,15 @@ function cpuCallback(response, context) {
     if(x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue == "Processor")
     {
       var pics = x[i].getElementsByTagName("picture")[0].childNodes[0].nodeValue;
-      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br><br>";
-      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br><br>";
-      var price = "Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-      var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;margin-top:15px;' />";
+      var offer = "<p style='color:red; margin-bottom:0px; font-weight:bold;'>Special Offer!</p>";
+      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br>";
+      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br>";
+      var price = "<p>Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue + "<span style='color:red';> -10%</span></p>";
+      var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;' />";
       break;
     }
   }
-  return "<div>" + image + pcat + pname + price + "</div>";
+  return "<div style='width:230px';>" + image + offer + pcat + pname + price + "</div>";
 }
 
 var memAjaxSetting = {
@@ -729,14 +730,15 @@ function memCallback(response, context) {
   for(i = 0; i < x.length; i++){
     if(x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue == "Memory"){
       var pics = x[i].getElementsByTagName("picture")[0].childNodes[0].nodeValue;
-      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br><br>";
-      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br><br>";
-      var price = "Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-      var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;margin-top:15px;' />";
+      var offer = "<p style='color:red; margin-bottom:0px; font-weight:bold;'>Special Offer!</p>";
+      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br>";
+      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br>";
+      var price = "<p>Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue + "<span style='color:red';> -10%</span></p>";
+      var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;' />";
       break;
     }
   }
-  return "<div>" + image + pcat + pname + price + "</div>";
+  return "<div>" + image + offer + pcat + pname + price + "</div>";
 }
 
 var caseAjaxSetting = {
@@ -752,14 +754,15 @@ function caseCallback(response, context) {
     if(x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue == "PC Case"){
 
       var pics = x[i].getElementsByTagName("picture")[0].childNodes[0].nodeValue;
-      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br><br>";
-      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br><br>";
-      var price = "Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+      var offer = "<p style='color:red; margin-bottom:0px; font-weight:bold;'>Special Offer!</p>";
+      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br>";
+      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br>";
+      var price = "<p>Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue + "<span style='color:red';> -10%</span></p>";
       var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;margin-top:15px;' />";
       break;
     }
   }
-  return "<div>" + image + pcat + pname + price + "</div>";
+  return "<div style='width:200px';>" + image + offer + pcat + pname + price + "</div>";
 }
 
 var monitorAjaxSetting = {
@@ -774,12 +777,13 @@ function monitorCallback(response, context) {
   for(i = 0; i < x.length; i++){
     if(x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue == "Monitors"){
       var pics = x[i].getElementsByTagName("picture")[0].childNodes[0].nodeValue;
-      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br><br>";
-      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br><br>";
-      var price = "Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-      var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;margin-top:15px;' />";
+      var offer = "<p style='color:red; margin-bottom:0px; font-weight:bold;'>Special Offer!</p>";
+      var pcat = x[i].getElementsByTagName("pcat")[0].childNodes[0].nodeValue + "<br>";
+      var pname = x[i].getElementsByTagName("pname")[0].childNodes[0].nodeValue + "<br>";
+      var price = "<p>Price: " + x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue + "<span style='color:red;';> -10%</span></p>";
+      var image = "<img src='pics/" + pics +"' style='float:right;margin-left:12px;width:75px;height:75px;' />";
       break;
     }
   }
-  return "<div>" + image + pcat + pname + price + "</div>";
+  return "<div style='width: 230px'>" + image + offer + pcat + pname + price + "</div>";
 }
