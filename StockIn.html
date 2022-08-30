@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <script src="javascript.js"></script>
+</head>
+<body onload="readStockIn()">
+    <div class="stockIn_div">
+        <td>
+            <tr>
+                <h4  style="left: 15px; position: relative;">Stock In</h4>
+
+                <input class="prodId_input" type="text" id="productID" required>
+                <label class="prodID_label" for="productID"><br/>Product ID</label>
+
+                <input class="prodCategory_input" type="text" id="prodCat"required>
+                <label class="prodCategory_label" for="prodCat"><br/>Product Category</label>
+                    
+                <input class="prodName_input" type="text" id="prodName"required>
+                <label class="prodName_label" for="prodName"><br/>Product Name</label>
+
+                <input class="prodQty_input" type="number" id="prodQty"required>
+                <label class="prodQty_label" for="prodQty"><br/>Quantity</label>
+
+                <div class="uploadIMG">Choose File</div>
+                <label class="uploadIMG_label">No File Chosen</label>
+            </tr>
+        </td>
+        <div class="submitSock">Submit</div>
+    </div>
+
+    <div class="stockIn_list">
+        <table class="stockIn_table">
+            <tr class="listCat">
+                <th style="width: 90px;"><h6>Product ID</h6></th>
+                <th style="width: 90px;"><h6>Product Category</h6></th>
+                <th style="width: 90px;"><h6>Product Name</h6></th>
+                <th style="width: 90px;"><h6>Product Price</h6> </th>
+                <th style="width: 90px;"><h6>Quantity</h6></th>
+            </tr>
+        </table>
+        <table class="stockIn_table1" id="StockIn_ID">
+
+        </table>
+    </div>
+
+
+
+</body>
+</html>
